@@ -14,10 +14,13 @@
 
 typedef enum adjective {
     adjectiveTiny =1,
-    adjectiveCute,
-    adjectiveSmall
+    adjectiveCute =2,
+    adjectiveSmall =3,
+    adjectiveNull = INT_MIN,
+    adjectiveLast = adjectiveSmall,
+    adjectiveFirst = adjectiveTiny
 } adjective;
 
-char *stringFromAdjective(adjective adjective);
+int *stringFromAdjective(adjective adjective);
 
 #endif /* adjectives_h */
