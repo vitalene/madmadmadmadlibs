@@ -25,6 +25,9 @@
 /* Begin PBXFileReference section */
 		285299BC1D5FE62C006F1BF9 /* MadMadMadMadLibs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MadMadMadMadLibs; sourceTree = BUILT_PRODUCTS_DIR; };
 		285299BF1D5FE62C006F1BF9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		285299C61D5FF372006F1BF9 /* verbs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = verbs.h; sourceTree = "<group>"; };
+		285299C71D5FF381006F1BF9 /* adjectives.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = adjectives.h; sourceTree = "<group>"; };
+		285299C81D5FF391006F1BF9 /* nouns.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nouns.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				285299BF1D5FE62C006F1BF9 /* main.c */,
+				285299C61D5FF372006F1BF9 /* verbs.h */,
+				285299C71D5FF381006F1BF9 /* adjectives.h */,
+				285299C81D5FF391006F1BF9 /* nouns.h */,
 			);
 			path = MadMadMadMadLibs;
 			sourceTree = "<group>";
