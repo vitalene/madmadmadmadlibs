@@ -17,8 +17,8 @@ typedef enum adjective {
     adjectiveCute =2,
     adjectiveSmall =3,
     adjectiveNull = INT_MIN,
-    adjectiveLast = adjectiveSmall,
-    adjectiveFirst = adjectiveTiny
+    adjectiveFirst = adjectiveTiny,
+    adjectiveLast = adjectiveSmall
 } adjective;
 
 int *stringFromAdjective(adjective adjective);

@@ -15,7 +15,10 @@
 typedef enum verb {
     verbSwam = 1,
     verbJumped,
-    verbFlew
+    verbFlew,
+    verbNull = INT_MIN, 
+    verbFirst = verbSwam,
+    verbLast = verbFlew
 } verb;
 
 char *stringFromVerb(verb verb);
