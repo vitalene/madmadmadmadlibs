@@ -22,6 +22,7 @@ int main(int argc, const char * argv[]) {
     
     
     while (numberOfItemsScanned != 1) {
+        printf("MAD LIBS!!!\n\n");
         fpurge(stdin);
         printf("Please enter your first name: ");
         numberOfItemsScanned = scanf("%[^\n]s\n", userName);
@@ -114,7 +115,10 @@ int main(int argc, const char * argv[]) {
     
     
     printf("\n %s, one day a %s %s %s across the ocean.\n", userName, adjWord, nounWord, verbWord );
-    /*  {
+    
+    
+    // will add later - current focus is on making the above ^ work
+   /* {
      printf("His friend, a %s %s wanted to travel too, but decided to try a different way, so she %s.\n\n",);
      
      
