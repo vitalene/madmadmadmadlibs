@@ -14,8 +14,11 @@
 
 typedef enum noun {
     nounPuppy = 1,
-    nounKitty,
-    nounMonster
+    nounKitty =2,
+    nounMonster =3,
+    nounFirst = nounPuppy,
+    nounLast = nounMonster,
+    nounNull = INT_MIN
 } noun;
 
 char *stringFromNoun(noun noun);

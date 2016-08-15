@@ -12,18 +12,16 @@ int main(int argc, const char * argv[]) {
     adjective numberOfAdjChosen = adjectiveNull;
     verb verbChosen = verbNull;
     verb numberOfVerbChosen = verbNull;
+    noun numberOfNounChosen = nounNull;
+    noun nounChosen = nounNull;
     char *adjWord = '\0';
     char *verbWord = '\0';
-    
-    
-    //******Get user's name*************
-    //**********************************
+    char *nounWord = '\0';
     char userName[20] = {'\0'};
     int numberOfItemsScanned = 0;
     
-    //*********************************
+    
     while (numberOfItemsScanned != 1) {
-        //Asks user for name and gathers input
         fpurge(stdin);
         printf("Please enter your first name: ");
         numberOfItemsScanned = scanf("%[^\n]s\n", userName);
@@ -32,60 +30,90 @@ int main(int argc, const char * argv[]) {
     }
     while ((numberOfAdjChosen != 1) ||
            (adjChosen < adjectiveFirst) || (adjChosen > adjectiveLast)) {
-        fpurge(stdin);
-        printf("Please enter: \n:");
         printf("    %d: tiny\n", adjectiveTiny);
         printf("    %d: cute\n", adjectiveCute);
         printf("    %d: small\n", adjectiveSmall);
+        printf("Please select an adjective :");
+        fpurge(stdin);
         numberOfAdjChosen = scanf("%d", &adjChosen);
     }
     switch (adjChosen) {
         case 1:
            adjWord = "tiny";
-            printf("%s", adjWord);
+            printf("%s\n", adjWord);
             break;
         case 2:
             adjWord = "cute";
-            printf("%s", adjWord);
+            printf("%s\n", adjWord);
             break;
         case 3:
             adjWord = "small";
-            printf("%s", adjWord);
+            printf("%s\n", adjWord);
             break;
         default:
-            printf("Something went wrong here!");
+            printf("Something went wrong here!\n");
             break;
     }
     
     while ((numberOfVerbChosen != 1) ||
            (verbChosen < verbFirst) || (verbChosen > verbLast)) {
-        fpurge(stdin);
-        printf("Please enter: \n:");
         printf("    %d: swam\n", verbSwam);
         printf("    %d: jumped\n", verbJumped);
         printf("    %d: flew\n", verbFlew);
+        printf("Please select a verb :");
+        fpurge(stdin);
         numberOfVerbChosen = scanf("%d", &verbChosen);
     }
     
     switch (verbChosen) {
         case 1:
             verbWord = "swam";
-            printf("%s", verbWord);
+            printf("%s\n", verbWord);
             break;
         case 2:
-            adjWord = "jumped";
-            printf("%s", verbWord);
+            verbWord = "jumped";
+            printf("%s\n", verbWord);
             break;
         case 3:
-            adjWord = "flew";
-            printf("%s", verbWord);
+            verbWord = "flew";
+            printf("%s\n", verbWord);
             break;
         default:
             printf("Something went wrong here!");
             break;
     }
     
-    printf("\n %s one day a %s %d %s across the ocean.\n", userName, adjWord, nounKitty, verbWord );
+    
+    while ((numberOfNounChosen != 1) ||
+           (nounChosen < nounFirst) || (nounChosen > nounLast)) {
+        printf("    %d: puppy\n", nounPuppy);
+        printf("    %d: kitty\n", nounKitty);
+        printf("    %d: monster\n", nounMonster);
+        printf("Please select a noun :");
+        fpurge(stdin);
+        numberOfNounChosen = scanf("%d", &nounChosen);
+    }
+    
+    switch (nounChosen) {
+        case 1:
+            nounWord = "puppy";
+            printf("%s\n", nounWord);
+            break;
+        case 2:
+            nounWord = "kitty";
+            printf("%s\n", nounWord);
+            break;
+        case 3:
+            nounWord = "monster";
+            printf("%s\n", nounWord);
+            break;
+        default:
+            printf("Something went wrong here!");
+            break;
+    }
+    
+    
+    printf("\n %s, one day a %s %s %s across the ocean.\n", userName, adjWord, nounWord, verbWord );
     /*  {
      printf("His friend, a %s %s wanted to travel too, but decided to try a different way, so she %s.\n\n",);
      

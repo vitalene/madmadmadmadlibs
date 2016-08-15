@@ -14,8 +14,8 @@
 
 typedef enum verb {
     verbSwam = 1,
-    verbJumped,
-    verbFlew,
+    verbJumped =2,
+    verbFlew =3,
     verbNull = INT_MIN, 
     verbFirst = verbSwam,
     verbLast = verbFlew
